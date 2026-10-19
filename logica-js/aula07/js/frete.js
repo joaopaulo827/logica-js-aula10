@@ -34,7 +34,7 @@ const FreteGratis=(compra,regiao)=>{
 botao.onclick = () => {
   const compra = Number(document.querySelector("#compra").value)
   const regiao = document.querySelector("#regiao").value   // texto: não precisa de Number
-  let frete
+  const frete=valorDoFrete(regiao)
 
   if (frete === -1) {
     saida.textContent = "Escolha a região de entrega."

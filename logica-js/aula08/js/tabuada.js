@@ -3,12 +3,8 @@ const botao = document.querySelector("#gerar")
 const saida = document.querySelector("#resultado")
 
 botao.onclick = () => {
-  const n = Number(document.querySelector("#numero").value)
-  let texto = ""
+  const numero = Number(document.querySelector("#numero").value)
+  const total=tabuada(numero)
 
-  for (let i = 1; i <= 10; i++) {
-    texto += n + " x " + i + " = " + n * i + "\n"
-  }
-
-  saida.textContent = texto
+  saida.textContent=total
 }
